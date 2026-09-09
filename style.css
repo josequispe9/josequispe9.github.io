@@ -143,12 +143,19 @@ main {
   border-top: 1px solid var(--border);
 }
 
-.section-label {
-  font-family: var(--mono);
-  color: var(--text-dim);
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
-  margin: 0 0 32px;
+/* Titulo de seccion presente para lectores de pantalla y buscadores,
+   pero fuera de la vista: cada seccion sigue teniendo su encabezado
+   aunque en pantalla no se muestre ninguno. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .about-grid {
