@@ -96,6 +96,17 @@ main {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0 0 16px;
+  line-height: 1.8;
+}
+
+/* En pantallas chicas el listado de roles ocupa varios renglones:
+   se achica un poco para que no le gane el peso visual al nombre. */
+@media (max-width: 640px) {
+  .eyebrow {
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
 }
 
 .hero h1 {
