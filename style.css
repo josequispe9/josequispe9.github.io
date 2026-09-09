@@ -89,6 +89,36 @@ main {
   padding: clamp(80px, 16vh, 160px) 0 80px;
 }
 
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 6vw, 64px);
+}
+
+/* min-width: 0 evita que el texto largo estire la columna y le coma
+   el lugar a la foto. */
+.hero-text { min-width: 0; }
+
+.hero-photo {
+  flex: 0 0 auto;
+  width: clamp(150px, 22vw, 210px);
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.8);
+}
+
+/* En pantallas chicas la foto pasa arriba del texto (column-reverse),
+   que es donde se espera ver una foto de perfil al abrir la pagina. */
+@media (max-width: 720px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 28px;
+  }
+  .hero-photo { width: 132px; }
+}
+
 .eyebrow {
   font-family: var(--mono);
   color: var(--accent-2);
