@@ -242,11 +242,24 @@ main {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  /* Sombra minima en reposo: le da a la transicion un punto de partida,
+     en vez de saltar desde "sin sombra". */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition:
+    border-color 0.25s ease,
+    transform    0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow   0.25s ease;
 }
+
 .card:hover {
   border-color: var(--accent);
-  transform: translateY(-3px);
+  transform: translateY(-6px);
+  /* Dos capas: una sombra honda y neutra que sostiene la elevacion, y un
+     resplandor tenue en el azul del sitio para que no parezca una sombra
+     generica pegada encima. */
+  box-shadow:
+    0 22px 44px -16px rgba(0, 0, 0, 0.7),
+    0 10px 24px -14px rgba(59, 130, 246, 0.45);
 }
 
 .card-top {
