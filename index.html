@@ -169,7 +169,7 @@
     // duracion larga ni el retardo del escalonado.
     el.addEventListener('transitionend', function done(e) {
       if (e.target !== el || e.propertyName !== 'transform') return;
-      el.classList.remove('reveal', 'is-visible');
+      el.classList.remove('reveal', 'is-visible', 'reveal-left', 'reveal-right');
       el.removeEventListener('transitionend', done);
     });
   }

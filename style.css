@@ -346,15 +346,18 @@ main {
   will-change: opacity, transform;
 }
 
+/* Variantes laterales: guiño a las entradas desde los costados, pero con un
+   recorrido corto para no romper la calma del diseño.
+   Van encadenadas a .reveal y declaradas ANTES de .is-visible a proposito:
+   asi dejan de aplicar apenas el elemento termino de entrar, y .is-visible
+   (misma especificidad, pero posterior) es la que gana. */
+.js .reveal.reveal-left  { transform: translateX(-28px); }
+.js .reveal.reveal-right { transform: translateX(28px); }
+
 .js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
-
-/* Variantes laterales: guiño a las entradas desde los costados,
-   pero con un recorrido corto para no romper la calma del diseño. */
-.js .reveal-left  { transform: translateX(-28px); }
-.js .reveal-right { transform: translateX(28px); }
 
 /* Las tags son muchas: escalonado mas corto para que no se haga eterno. */
 .tag-cloud { --step: 35ms; }
