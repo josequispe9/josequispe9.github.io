@@ -155,6 +155,25 @@ main {
   stroke-linejoin: round;
 }
 
+/* El icono se dibuja solo: cada trazo empieza oculto (el hueco del dasharray
+   lo tapa entero) y se descubre llevando el dashoffset a cero.
+   Va por animacion y no por el sistema .reveal a proposito: ese sistema le
+   saca las clases al elemento al terminar, y eso aca revertiria el dibujo.
+   La animacion corre al cargar, que es cuando entra el resto del hero. */
+.hero-deco path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dibujar-trazo 0.9s ease forwards;
+}
+
+.hero-deco path:nth-child(1) { animation-delay: 0.35s; }  /* la pantalla */
+.hero-deco path:nth-child(2) { animation-delay: 0.60s; }  /* la base */
+.hero-deco path:nth-child(3) { animation-delay: 0.80s; }  /* el </> */
+
+@keyframes dibujar-trazo {
+  to { stroke-dashoffset: 0; }
+}
+
 .eyebrow {
   font-family: var(--mono);
   color: var(--accent-2);
@@ -482,6 +501,8 @@ main {
 
   * {
     animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0.01ms !important;
   }
 }
