@@ -102,11 +102,17 @@ main {
 .hero-photo-wrap {
   position: absolute;
   top: 50%;
-  right: 0;
+  /* Negativo: se corre hacia afuera de la columna de contenido, hasta meterse
+     en el margen. Escala con el ancho, y el tope de -16px evita que en
+     pantallas chicas se pase del borde y aparezca scroll horizontal. */
+  right: clamp(-72px, -4vw, -16px);
   transform: translateY(-50%);
   line-height: 0;
   /* Por debajo del texto del hero, que va en z-index 1. */
   z-index: 0;
+  /* La opacidad va en el contenedor y no en la imagen: la imagen anima su
+     propia opacidad al entrar (.reveal) y una cosa pisaria a la otra. */
+  opacity: 0.4;
 }
 
 /* El texto se declara posicionado para poder quedar por encima de la foto:
@@ -128,7 +134,8 @@ main {
      rellenas con el color de fondo al aplanarla, y sobre el degradado del
      hero se notarian como un cuadrado oscuro. */
   border-radius: 50%;
-  box-shadow: 0 16px 32px -14px rgba(0, 0, 0, 0.8);
+  /* Sin sombra: ahora la foto se lee como parte del fondo, y una sombra la
+     volveria a despegar del plano, que es justo lo contrario. */
 }
 
 .eyebrow {
