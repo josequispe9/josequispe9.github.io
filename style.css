@@ -327,3 +327,61 @@ main {
   color: var(--text-dim);
   font-size: 0.85rem;
 }
+
+/* ============================================================
+   Reveal on scroll
+   Los elementos con .reveal entran cuando aparecen en pantalla.
+   El JS solo agrega .is-visible; toda la animacion vive aca.
+   ============================================================ */
+
+/* Solo se ocultan si el JS corrio (la clase .js la pone un script
+   inline en el <head>). Sin JS, la pagina se ve completa y normal. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity   0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i, 0) * var(--step, 70ms));
+  will-change: opacity, transform;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Variantes laterales: guiño a las entradas desde los costados,
+   pero con un recorrido corto para no romper la calma del diseño. */
+.js .reveal-left  { transform: translateX(-28px); }
+.js .reveal-right { transform: translateX(28px); }
+
+/* Las tags son muchas: escalonado mas corto para que no se haga eterno. */
+.tag-cloud { --step: 35ms; }
+
+/* Nota: al terminar la entrada, el JS le saca las clases .reveal/.is-visible
+   al elemento. Con eso se libera el will-change y cada elemento recupera sus
+   transiciones propias (el hover de las cards, por ejemplo). */
+
+/* ============================================================
+   Accesibilidad: respetar a quien pidio menos movimiento
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .btn:hover,
+  .card:hover {
+    transform: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

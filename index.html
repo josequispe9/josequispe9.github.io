@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jose Quispe — Data Engineer</title>
 <meta name="description" content="Jose Quispe — Data Engineer building conversational LLM &amp; voice AI systems, Python automation, and data pipelines.">
@@ -29,22 +30,22 @@
 <main>
 
   <section id="top" class="hero">
-    <p class="eyebrow">Data Engineer</p>
-    <h1>Jose Quispe</h1>
-    <p class="hero-sub">I build <span class="hl">conversational LLM &amp; voice AI systems</span>, automate workflows with Python, and design data pipelines that run on their own.</p>
-    <div class="hero-actions">
+    <p class="eyebrow reveal" style="--i:0">Data Engineer</p>
+    <h1 class="reveal" style="--i:1">Jose Quispe</h1>
+    <p class="hero-sub reveal" style="--i:2">I build <span class="hl">conversational LLM &amp; voice AI systems</span>, automate workflows with Python, and design data pipelines that run on their own.</p>
+    <div class="hero-actions reveal" style="--i:3">
       <a href="#work" class="btn btn-primary">See my work</a>
       <a href="https://github.com/josequispe9" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
     </div>
   </section>
 
   <section id="about" class="section">
-    <p class="section-label">01 — About</p>
+    <p class="section-label reveal">01 — About</p>
     <div class="about-grid">
-      <p class="about-text">
+      <p class="about-text reveal reveal-left">
         I'm a Data Engineer who has spent the last few years moving from classic data science into building production systems: automation pipelines, large-scale data infrastructure on GCP, and — most recently — conversational AI products that talk to people over text and voice. I like taking a messy, manual process and turning it into something reliable that runs without me watching it.
       </p>
-      <ul class="about-facts">
+      <ul class="about-facts reveal reveal-right">
         <li><span>Focus</span>Data pipelines · LLM &amp; voice AI · Python automation</li>
         <li><span>Cloud</span>Google Cloud Platform, BigQuery</li>
         <li><span>Background</span>Started in data science &amp; ML, moved into engineering</li>
@@ -53,31 +54,31 @@
   </section>
 
   <section id="skills" class="section">
-    <p class="section-label">02 — Skills</p>
+    <p class="section-label reveal">02 — Skills</p>
     <div class="tag-cloud">
-      <span class="tag">Python</span>
-      <span class="tag">SQL</span>
-      <span class="tag">C++</span>
-      <span class="tag">LLM APIs</span>
-      <span class="tag">LangChain / LangGraph</span>
-      <span class="tag">TensorFlow</span>
-      <span class="tag">PyTorch</span>
-      <span class="tag">scikit-learn</span>
-      <span class="tag">Apache Airflow</span>
-      <span class="tag">BigQuery</span>
-      <span class="tag">Google Cloud Platform</span>
-      <span class="tag">Docker</span>
-      <span class="tag">Flask</span>
-      <span class="tag">Git</span>
+      <span class="tag reveal" style="--i:0">Python</span>
+      <span class="tag reveal" style="--i:1">SQL</span>
+      <span class="tag reveal" style="--i:2">C++</span>
+      <span class="tag reveal" style="--i:3">LLM APIs</span>
+      <span class="tag reveal" style="--i:4">LangChain / LangGraph</span>
+      <span class="tag reveal" style="--i:5">TensorFlow</span>
+      <span class="tag reveal" style="--i:6">PyTorch</span>
+      <span class="tag reveal" style="--i:7">scikit-learn</span>
+      <span class="tag reveal" style="--i:8">Apache Airflow</span>
+      <span class="tag reveal" style="--i:9">BigQuery</span>
+      <span class="tag reveal" style="--i:10">Google Cloud Platform</span>
+      <span class="tag reveal" style="--i:11">Docker</span>
+      <span class="tag reveal" style="--i:12">Flask</span>
+      <span class="tag reveal" style="--i:13">Git</span>
     </div>
   </section>
 
   <section id="work" class="section">
-    <p class="section-label">03 — Selected Work</p>
+    <p class="section-label reveal">03 — Selected Work</p>
 
     <div class="work-grid">
 
-      <article class="card">
+      <article class="card reveal" style="--i:0">
         <div class="card-top">
           <h3>Conversational AI Platform for WhatsApp Campaigns</h3>
           <span class="badge badge-private">Private case study</span>
@@ -88,7 +89,7 @@
         </div>
       </article>
 
-      <article class="card">
+      <article class="card reveal" style="--i:1">
         <div class="card-top">
           <h3>Voice AI for Call Center Operations</h3>
           <span class="badge badge-private">Private case study</span>
@@ -99,7 +100,7 @@
         </div>
       </article>
 
-      <article class="card">
+      <article class="card reveal" style="--i:2">
         <div class="card-top">
           <h3>Lead Scoring Pipeline</h3>
           <span class="badge badge-public">Public repo</span>
@@ -111,7 +112,7 @@
         <a class="card-link" href="https://github.com/josequispe9/modelado-de-scoring-wc-pipeline" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card">
+      <article class="card reveal" style="--i:3">
         <div class="card-top">
           <h3>Call Center Performance Dashboard</h3>
           <span class="badge badge-public">Public repo</span>
@@ -123,33 +124,21 @@
         <a class="card-link" href="https://github.com/josequispe9/WC-estadisticas-GUI" target="_blank" rel="noopener">View on GitHub ↗</a>
       </article>
 
-      <article class="card">
-        <div class="card-top">
-          <h3>NYC Electric Taxi Feasibility Study</h3>
-          <span class="badge badge-public">Public repo</span>
-        </div>
-        <p>Analyzed NYC taxi trip data to evaluate the feasibility of transitioning a taxi fleet to electric vehicles.</p>
-        <div class="card-stack">
-          <span>Python</span><span>Pandas</span><span>Data Analysis</span>
-        </div>
-        <a class="card-link" href="https://github.com/josequispe9/taxi_electrico_nyc" target="_blank" rel="noopener">View on GitHub ↗</a>
-      </article>
-
     </div>
   </section>
 
   <section id="contact" class="section contact">
-    <p class="section-label">04 — Contact</p>
-    <h2>Let's build something.</h2>
-    <p class="contact-sub">Open to collaborating on projects, talking AI/ML trends, or exploring new roles.</p>
+    <p class="section-label reveal">04 — Contact</p>
+    <h2 class="reveal" style="--i:1">Let's build something.</h2>
+    <p class="contact-sub reveal" style="--i:2">Open to collaborating on projects, talking AI/ML trends, or exploring new roles.</p>
     <div class="contact-links">
-      <a href="mailto:qjose727@gmail.com" class="contact-link">
+      <a href="mailto:qjose727@gmail.com" class="contact-link reveal" style="--i:0">
         <span>Email</span>qjose727@gmail.com
       </a>
-      <a href="https://www.linkedin.com/in/qjose" target="_blank" rel="noopener" class="contact-link">
+      <a href="https://www.linkedin.com/in/qjose" target="_blank" rel="noopener" class="contact-link reveal" style="--i:1">
         <span>LinkedIn</span>linkedin.com/in/qjose
       </a>
-      <a href="https://github.com/josequispe9" target="_blank" rel="noopener" class="contact-link">
+      <a href="https://github.com/josequispe9" target="_blank" rel="noopener" class="contact-link reveal" style="--i:2">
         <span>GitHub</span>github.com/josequispe9
       </a>
     </div>
@@ -158,8 +147,45 @@
 </main>
 
 <footer class="footer">
-  <p>Jose Quispe — built with plain HTML/CSS, hosted on GitHub Pages.</p>
+  <p class="reveal">Jose Quispe — built with plain HTML/CSS, hosted on GitHub Pages.</p>
 </footer>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  // Sin IntersectionObserver (navegador viejo): mostrar todo de una.
+  if (!('IntersectionObserver' in window)) {
+    for (var i = 0; i < els.length; i++) els[i].classList.add('is-visible');
+    return;
+  }
+
+  function reveal(el) {
+    el.classList.add('is-visible');
+
+    // Al terminar de entrar, sacarle las clases: asi el elemento vuelve a sus
+    // transiciones propias (por ej. el hover de las cards) sin arrastrar la
+    // duracion larga ni el retardo del escalonado.
+    el.addEventListener('transitionend', function done(e) {
+      if (e.target !== el || e.propertyName !== 'transform') return;
+      el.classList.remove('reveal', 'is-visible');
+      el.removeEventListener('transitionend', done);
+    });
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    for (var i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) {
+        reveal(entries[i].target);
+        observer.unobserve(entries[i].target);  // aparece una vez y se queda
+      }
+    }
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  for (var j = 0; j < els.length; j++) observer.observe(els[j]);
+})();
+</script>
 
 </body>
 </html>
