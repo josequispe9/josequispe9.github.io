@@ -138,6 +138,23 @@ main {
      volveria a despegar del plano, que es justo lo contrario. */
 }
 
+/* Notebook al pie derecho de la foto. Va apoyada en la esquina inferior
+   derecha del cuadrado que contiene al circulo: como ahi la foto no llega,
+   queda calzada contra el borde sin taparle la cara.
+   Hereda la opacidad de .hero-photo-wrap, asi que acompana a la foto. */
+.hero-deco {
+  position: absolute;
+  right: -2%;
+  bottom: 4%;
+  width: 36%;
+  height: auto;
+  fill: none;
+  stroke: var(--accent-2);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .eyebrow {
   font-family: var(--mono);
   color: var(--accent-2);
