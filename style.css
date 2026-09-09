@@ -89,27 +89,45 @@ main {
   padding: clamp(80px, 16vh, 160px) 0 80px;
 }
 
-/* El nombre y la foto van en la misma linea. */
+/* La foto se ancla al borde derecho, a la altura del nombre. Va posicionada
+   (no en el flujo) para poder superponerse al texto sin empujarlo. */
 .hero-name {
-  display: flex;
-  align-items: center;
-  gap: clamp(16px, 4vw, 32px);
+  position: relative;
   margin: 0 0 20px;
 }
 
-/* El margen inferior lo lleva ahora .hero-name; si se lo dejamos al h1, su
-   margen entra en el centrado vertical del flex y la foto queda corrida.
-   Se usa .hero .hero-name h1 para ganarle en especificidad a .hero h1. */
+/* Se usa .hero .hero-name h1 para ganarle en especificidad a .hero h1. */
 .hero .hero-name h1 { margin: 0; }
 
+.hero-photo-wrap {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  line-height: 0;
+  /* Por debajo del texto del hero, que va en z-index 1. */
+  z-index: 0;
+}
+
+/* El texto se declara posicionado para poder quedar por encima de la foto:
+   sin position, un elemento estatico siempre pinta por debajo de uno
+   posicionado, por mas z-index que se le ponga. */
+.hero .eyebrow,
+.hero .hero-name h1,
+.hero .hero-sub,
+.hero .hero-actions {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-photo {
-  flex: 0 0 auto;
-  width: clamp(88px, 13vw, 132px);
+  display: block;
+  width: clamp(150px, 26vw, 264px);
   height: auto;
-  /* La foto ya viene recortada en circulo; el border-radius tapa las
-     esquinas que se rellenaron al aplanarla sobre el fondo. */
+  /* El recorte circular se mantiene: las esquinas de la imagen quedaron
+     rellenas con el color de fondo al aplanarla, y sobre el degradado del
+     hero se notarian como un cuadrado oscuro. */
   border-radius: 50%;
-  border: 1px solid var(--border);
   box-shadow: 0 16px 32px -14px rgba(0, 0, 0, 0.8);
 }
 
