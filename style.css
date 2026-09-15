@@ -75,6 +75,45 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-cta:hover { border-color: var(--accent); color: var(--accent-2); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Toggle de idioma: dos segmentos en una pildora, mismo estilo que el CTA.
+   Un solo boton, no dos: la accion siempre es "pasar al otro idioma". */
+.lang-toggle {
+  display: inline-flex;
+  padding: 0;
+  overflow: hidden;
+  font: inherit;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+.lang-toggle:hover { border-color: var(--accent); }
+.lang-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.lang-toggle span {
+  padding: 7px 11px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+/* El segmento activo sale del lang del <html>, que el JS mantiene al dia:
+   asi el resaltado no depende de andar poniendo y sacando clases. */
+html[lang="es"] .lang-toggle [data-lang="es"],
+html[lang="en"] .lang-toggle [data-lang="en"] {
+  color: var(--text);
+  background: rgba(59, 130, 246, 0.18);
+}
+
 @media (max-width: 640px) {
   .nav-links { display: none; }
 }

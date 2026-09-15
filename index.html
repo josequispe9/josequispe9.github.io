@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jose Quispe — Data Engineer &amp; Data Analyst</title>
-<meta name="description" content="Jose Quispe — Data Engineer building conversational LLM &amp; voice AI systems, Python automation, and data pipelines.">
+<meta name="description" content="Jose Quispe — Data Engineer. Construyo sistemas de IA conversacional y de voz con LLMs, automatización en Python y pipelines de datos.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230f172a%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-family=%22monospace%22>J</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -19,18 +19,24 @@
 <header class="nav">
   <a href="#top" class="nav-brand">JQ<span class="dot">.</span></a>
   <nav class="nav-links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#work">Work</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" data-i18n="nav.about">Sobre mí</a>
+    <a href="#skills" data-i18n="nav.skills">Skills</a>
+    <a href="#work" data-i18n="nav.work">Proyectos</a>
+    <a href="#contact" data-i18n="nav.contact">Contacto</a>
   </nav>
-  <a class="nav-cta" href="mailto:qjose727@gmail.com">Say hi</a>
+  <div class="nav-right">
+    <!-- El idioma activo se resalta por CSS a partir del lang del <html>. -->
+    <button class="lang-toggle" type="button" aria-label="Switch to English">
+      <span data-lang="es">ES</span><span data-lang="en">EN</span>
+    </button>
+    <a class="nav-cta" href="mailto:qjose727@gmail.com" data-i18n="nav.cta">Escribime</a>
+  </div>
 </header>
 
 <main>
 
   <section id="top" class="hero">
-    <p class="eyebrow reveal" style="--i:0">Data Engineer&nbsp;| Data Analyst&nbsp;| Automation&nbsp;| LLM &amp; Voice AI Agents</p>
+    <p class="eyebrow reveal" style="--i:0" data-i18n="hero.eyebrow">Data Engineer&nbsp;| Data Analyst&nbsp;| Automatización&nbsp;| Agentes LLM &amp; IA de voz</p>
     <div class="hero-name">
       <h1 class="reveal" style="--i:1">Jose Quispe</h1>
       <span class="hero-photo-wrap">
@@ -44,29 +50,29 @@
         </svg>
       </span>
     </div>
-    <p class="hero-sub reveal" style="--i:3">I build <span class="hl">conversational LLM &amp; voice AI systems</span>, automate workflows with Python, and design data pipelines that run on their own.</p>
+    <p class="hero-sub reveal" style="--i:3" data-i18n="hero.sub">Construyo <span class="hl">sistemas de IA conversacional y de voz con LLMs</span>, automatizo flujos de trabajo con Python y diseño pipelines de datos que corren solos.</p>
     <div class="hero-actions reveal" style="--i:4">
-      <a href="#work" class="btn btn-primary">See my work</a>
+      <a href="#work" class="btn btn-primary" data-i18n="hero.work">Ver mis proyectos</a>
       <a href="https://github.com/josequispe9" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
     </div>
   </section>
 
   <section id="about" class="section">
-    <h2 class="sr-only">About</h2>
+    <h2 class="sr-only" data-i18n="about.title">Sobre mí</h2>
     <div class="about-grid">
-      <p class="about-text reveal reveal-left">
-        I'm a Data Engineer who has spent the last few years moving from classic data science into building production systems: automation pipelines, large-scale data infrastructure on GCP, and — most recently — conversational AI products that talk to people over text and voice. I like taking a messy, manual process and turning it into something reliable that runs without me watching it.
+      <p class="about-text reveal reveal-left" data-i18n="about.text">
+        Soy Data Engineer y en los últimos años pasé de la ciencia de datos clásica a construir sistemas en producción: pipelines de automatización, infraestructura de datos a gran escala en GCP y, más recientemente, productos de IA conversacional que hablan con personas por texto y por voz. Me gusta agarrar un proceso manual y desordenado y convertirlo en algo confiable que funcione sin que tenga que estar mirándolo.
       </p>
       <ul class="about-facts reveal reveal-right">
-        <li><span>Focus</span>Data pipelines · LLM &amp; voice AI · Python automation</li>
-        <li><span>Cloud</span>Google Cloud Platform, BigQuery</li>
-        <li><span>Background</span>Started in data science &amp; ML, moved into engineering</li>
+        <li data-i18n="about.focus"><span>Foco</span>Pipelines de datos · LLM &amp; IA de voz · Automatización con Python</li>
+        <li data-i18n="about.cloud"><span>Cloud</span>Google Cloud Platform, BigQuery</li>
+        <li data-i18n="about.background"><span>Trayectoria</span>Empecé en ciencia de datos &amp; ML y pasé a ingeniería</li>
       </ul>
     </div>
   </section>
 
   <section id="skills" class="section">
-    <h2 class="sr-only">Skills</h2>
+    <h2 class="sr-only" data-i18n="skills.title">Skills</h2>
     <div class="tag-cloud">
       <span class="tag reveal" style="--i:0">Python</span>
       <span class="tag reveal" style="--i:1">SQL</span>
@@ -86,16 +92,16 @@
   </section>
 
   <section id="work" class="section">
-    <h2 class="sr-only">Selected Work</h2>
+    <h2 class="sr-only" data-i18n="work.title">Proyectos destacados</h2>
 
     <div class="work-grid">
 
       <article class="card reveal" style="--i:0">
         <div class="card-top">
-          <h3>Conversational AI Platform for WhatsApp Campaigns</h3>
-          <span class="badge badge-private">Private case study</span>
+          <h3 data-i18n="work.whatsapp.title">Plataforma de IA conversacional para campañas de WhatsApp</h3>
+          <span class="badge badge-private" data-i18n="work.badgePrivate">Caso privado</span>
         </div>
-        <p>Designed and built the backend that powers automated inbound and outbound WhatsApp conversations for call-center campaigns: a routing engine that manages multiple connected WhatsApp accounts, an LLM-based response generator, and a monitoring/configuration frontend for the operations team.</p>
+        <p data-i18n="work.whatsapp.text">Diseñé y construí el backend que impulsa conversaciones automatizadas de WhatsApp, entrantes y salientes, para campañas de call center: un motor de ruteo que administra varias cuentas de WhatsApp conectadas, un generador de respuestas basado en LLM y un frontend de monitoreo y configuración para el equipo de operaciones.</p>
         <div class="card-stack">
           <span>Python</span><span>TypeScript</span><span>LLM APIs</span><span>WhatsApp Web API</span>
         </div>
@@ -103,10 +109,10 @@
 
       <article class="card reveal" style="--i:1">
         <div class="card-top">
-          <h3>Voice AI for Call Center Operations</h3>
-          <span class="badge badge-private">Private case study</span>
+          <h3 data-i18n="work.voice.title">IA de voz para operaciones de call center</h3>
+          <span class="badge badge-private" data-i18n="work.badgePrivate">Caso privado</span>
         </div>
-        <p>Built an AI assistant embedded in the outbound dialer that gives agents real-time suggestions during live calls, plus a pipeline that improves the accuracy and structure of call transcriptions for downstream analysis.</p>
+        <p data-i18n="work.voice.text">Desarrollé un asistente de IA integrado al discador saliente que les da sugerencias en tiempo real a los agentes durante las llamadas, más un pipeline que mejora la precisión y la estructura de las transcripciones para su análisis posterior.</p>
         <div class="card-stack">
           <span>Python</span><span>Speech-to-Text</span><span>LLM APIs</span><span>TypeScript</span>
         </div>
@@ -114,34 +120,34 @@
 
       <article class="card reveal" style="--i:2">
         <div class="card-top">
-          <h3>Lead Scoring Pipeline</h3>
-          <span class="badge badge-public">Public repo</span>
+          <h3 data-i18n="work.scoring.title">Pipeline de scoring de leads</h3>
+          <span class="badge badge-public" data-i18n="work.badgePublic">Repo público</span>
         </div>
-        <p>End-to-end pipeline that periodically scores leads so sales teams always work the best available contacts first — from raw data ingestion to a production scoring model.</p>
+        <p data-i18n="work.scoring.text">Pipeline de punta a punta que puntúa leads periódicamente para que los equipos de ventas trabajen siempre primero con los mejores contactos disponibles: desde la ingesta de datos crudos hasta un modelo de scoring en producción.</p>
         <div class="card-stack">
           <span>Python</span><span>BigQuery</span><span>Airflow</span><span>scikit-learn</span>
         </div>
-        <a class="card-link" href="https://github.com/josequispe9/modelado-de-scoring-wc-pipeline" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <a class="card-link" href="https://github.com/josequispe9/modelado-de-scoring-wc-pipeline" target="_blank" rel="noopener" data-i18n="work.viewGithub">Ver en GitHub ↗</a>
       </article>
 
       <article class="card reveal" style="--i:3">
         <div class="card-top">
-          <h3>Call Center Performance Dashboard</h3>
-          <span class="badge badge-public">Public repo</span>
+          <h3 data-i18n="work.dashboard.title">Dashboard de rendimiento de call center</h3>
+          <span class="badge badge-public" data-i18n="work.badgePublic">Repo público</span>
         </div>
-        <p>Desktop application that turns raw call-center activity data into performance statistics and visualizations for supervisors.</p>
+        <p data-i18n="work.dashboard.text">Aplicación de escritorio que convierte los datos crudos de actividad del call center en estadísticas y visualizaciones de rendimiento para supervisores.</p>
         <div class="card-stack">
           <span>Python</span><span>Data Visualization</span><span>Desktop GUI</span>
         </div>
-        <a class="card-link" href="https://github.com/josequispe9/WC-estadisticas-GUI" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <a class="card-link" href="https://github.com/josequispe9/WC-estadisticas-GUI" target="_blank" rel="noopener" data-i18n="work.viewGithub">Ver en GitHub ↗</a>
       </article>
 
     </div>
   </section>
 
   <section id="contact" class="section contact">
-    <h2 class="reveal" style="--i:1">Let's build something.</h2>
-    <p class="contact-sub reveal" style="--i:2">Open to collaborating on projects, talking AI/ML trends, or exploring new roles.</p>
+    <h2 class="reveal" style="--i:1" data-i18n="contact.title">Construyamos algo.</h2>
+    <p class="contact-sub reveal" style="--i:2" data-i18n="contact.sub">Abierto a colaborar en proyectos, charlar sobre tendencias en IA/ML o explorar nuevos roles.</p>
     <div class="contact-links">
       <a href="mailto:qjose727@gmail.com" class="contact-link reveal" style="--i:0">
         <span>Email</span>qjose727@gmail.com
@@ -158,9 +164,10 @@
 </main>
 
 <footer class="footer">
-  <p class="reveal">Jose Quispe — built with plain HTML/CSS, hosted on GitHub Pages.</p>
+  <p class="reveal" data-i18n="footer">Jose Quispe — hecho con HTML/CSS puro, alojado en GitHub Pages.</p>
 </footer>
 
+<script src="i18n.js?v=1"></script>
 <script>
 (function () {
   var els = document.querySelectorAll('.reveal');
